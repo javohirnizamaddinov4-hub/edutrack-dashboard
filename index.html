@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTrack — O'quv Markazi Boshqaruv Paneli</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- 4-TALAB: NAVIGATSIYA PANELI VA SIDEBAR -->
+        <aside class="sidebar">
+            <div>
+                <!-- 2 & 4-TALAB: LOGOTIP VA TIZIM NOMI (RASM BILAN) -->
+                <div class="sidebar-brand">
+                    <img src="images/logo.svg" alt="EduTrack Logo" class="brand-logo-img" onerror="this.style.display='none'">
+                    <span class="brand-title">EduTrack</span>
+                </div>
+
+                <!-- NAVIGATSIYA MENYUSI -->
+                <nav class="sidebar-menu">
+                    <a href="#" class="menu-item active" data-tab="dashboard">
+                        <span class="menu-icon">🏠</span> Bosh sahifa
+                    </a>
+                    <a href="#" class="menu-item" data-tab="students">
+                        <span class="menu-icon">👥</span> O'quvchilar
+                    </a>
+                    <a href="#" class="menu-item" data-tab="groups">
+                        <span class="menu-icon">👥</span> Guruhlar
+                    </a>
+                    <a href="#" class="menu-item" data-tab="teachers">
+                        <span class="menu-icon">👨‍🏫</span> O'qituvchilar
+                    </a>
+                    <a href="#" class="menu-item" data-tab="attendance">
+                        <span class="menu-icon">📅</span> Davomat
+                    </a>
+                    <a href="#" class="menu-item" data-tab="payments">
+                        <span class="menu-icon">💳</span> To'lovlar
+                    </a>
+                    <a href="#" class="menu-item" data-tab="reports">
+                        <span class="menu-icon">📊</span> Hisobotlar
+                    </a>
+                    <a href="#" class="menu-item" data-tab="settings">
+                        <span class="menu-icon">⚙️</span> Sozlamalar
+                    </a>
+                </nav>
+            </div>
+
+            <!-- 4-TALAB: FOOTER (Kopirayt belgisi, Muallif F.I.SH. va Yil) -->
+            <footer class="sidebar-footer">
+                <p class="footer-copy">&copy; 2026 Aliyev Vali</p>
+                <p class="footer-desc">EduTrack O'quv Markazi</p>
+            </footer>
+        </aside>
+
+        <!-- 3-TALAB: SEMANTIK <main> TEGI -->
+        <main class="main-content">
+            
+            <!-- 4-TALAB: HEADER QISMI -->
+            <header class="top-header">
+                <div class="header-left-space">
+                    <h2 class="current-page-title" id="page-title">Bosh sahifa</h2>
+                </div>
+                <div class="top-header-right">
+                    <div class="header-info-pill">
+                        <span id="live-date">📅 12.10.2026</span>
+                    </div>
+                    <div class="header-info-pill">
+                        <span id="live-clock">🕒 22:41:00</span>
+                    </div>
+                    <button class="icon-btn" id="theme-toggle-btn" title="Rejimni o'zgartirish">
+                        ☀️
+                    </button>
+                    <div class="user-profile-pill">
+                        <span class="user-avatar-small">👤</span>
+                        <span class="user-name-text">Admin</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 4-TALAB: ASOSIY KONTENT QISMI (Ma'lumotlar, jadvallar, formalar) -->
+            <div class="content-body">
+                
+                <!-- 1. BOSH SAHIFA SECTION -->
+                <section id="tab-dashboard" class="tab-content active">
+                    <div class="welcome-banner">
+                        <div class="welcome-banner-icon">🎓</div>
+                        <div class="welcome-banner-text">
+                            <h2>Xush kelibsiz, Administrator!</h2>
+                            <p>O'quv markazi boshqaruv paneliga xush kelibsiz. Ishlaringizda omad tilaymiz!</p>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title-main">Tezkor amallar</h3>
+                    <div class="quick-actions-grid">
+                        <div class="action-card" data-tab="students">
+                            <div class="action-card-content">
+                                <div class="action-icon-box blue">👥</div>
+                                <div>
+                                    <h4>O'quvchilar</h4>
+                                    <p>O'quvchilar ro'yxatini ko'rish</p>
+                                </div>
+                            </div>
+                            <span class="arrow-icon">›</span>
+                        </div>
+
+                        <div class="action-card" data-tab="groups">
+                            <div class="action-card-content">
+                                <div class="action-icon-box green">👥</div>
+                                <div>
+                                    <h4>Guruhlar</h4>
+                                    <p>Guruhlar bilan ishlash</p>
+                                </div>
+                            </div>
+                            <span class="arrow-icon">›</span>
+                        </div>
+
+                        <div class="action-card" data-tab="teachers">
+                            <div class="action-card-content">
+                                <div class="action-icon-box purple">👨‍🏫</div>
+                                <div>
+                                    <h4>O'qituvchilar</h4>
+                                    <p>O'qituvchilar ro'yxatini ko'rish</p>
+                                </div>
+                            </div>
+                            <span class="arrow-icon">›</span>
+                        </div>
+
+                        <div class="action-card" data-tab="attendance">
+                            <div class="action-card-content">
+                                <div class="action-icon-box yellow">📅</div>
+                                <div>
+                                    <h4>Davomat</h4>
+                                    <p>Davomatni boshqarish</p>
+                                </div>
+                            </div>
+                            <span class="arrow-icon">›</span>
+                        </div>
+
+                        <div class="action-card" data-tab="payments">
+                            <div class="action-card-content">
+                                <div class="action-icon-box red">💳</div>
+                                <div>
+                                    <h4>To'lovlar</h4>
+                                    <p>To'lovlar va qarzdorlik</p>
+                                </div>
+                            </div>
+                            <span class="arrow-icon">›</span>
+                        </div>
+
+                        <div class="action-card" data-tab="reports">
+                            <div class="action-card-content">
+                                <div class="action-icon-box cyan">📊</div>
+                                <div>
+                                    <h4>Hisobotlar</h4>
+                                    <p>Hisobotlarni ko'rish</p>
+                                </div>
+                            </div>
+                            <span class="arrow-icon">›</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. O'QUVCHILAR SECTION (Jadval bilan) -->
+                <section id="tab-students" class="tab-content">
+                    <div class="inner-window">
+                        <div class="window-top-flex">
+                            <h2>👥 O'quvchilar Boshqaruvi</h2>
+                            <button class="btn-primary-custom" id="add-student-btn">+ O'quvchi qo'shish</button>
+                        </div>
+                        <p class="window-desc">Markazimizning barcha ro'yxatdan o'tgan o'quvchilari bazasi.</p>
+                        
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>F.I.SH.</th>
+                                    <th>Telefon raqami</th>
+                                    <th>Guruh / Kurs</th>
+                                    <th>Holati</th>
+                                </tr>
+                            </thead>
+                            <tbody id="students-table-body">
+                                <tr>
+                                    <td>1</td>
+                                    <td>Jasur Yo'ldoshev</td>
+                                    <td>+998 90 123 45 67</td>
+                                    <td>Frontend-101</td>
+                                    <td><span class="status-pill active">Faol</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Lola Axmedova</td>
+                                    <td>+998 91 987 65 43</td>
+                                    <td>Python-Beginner</td>
+                                    <td><span class="status-pill active">Faol</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 3. GURUHLAR SECTION -->
+                <section id="tab-groups" class="tab-content">
+                    <div class="inner-window">
+                        <h2>👥 O'quv Guruhlari</h2>
+                        <p class="window-desc">Faol o'quv guruhlari va dars jadvallari.</p>
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>Guruh Nomi</th>
+                                    <th>O'qituvchi</th>
+                                    <th>Kunlari</th>
+                                    <th>Vaqti</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Frontend-101</td>
+                                    <td>Anvar Rahimov</td>
+                                    <td>Toq kunlari</td>
+                                    <td>14:00 - 16:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 4. O'QITUVCHILAR SECTION -->
+                <section id="tab-teachers" class="tab-content">
+                    <div class="inner-window">
+                        <h2>👨‍🏫 O'qituvchilar</h2>
+                        <p class="window-desc">Markaz ustozlari ro'yxati.</p>
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>F.I.SH.</th>
+                                    <th>Mutaxassisligi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Anvar Rahimov</td>
+                                    <td>Senior Frontend Dev</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 5. DAVOMAT SECTION -->
+                <section id="tab-attendance" class="tab-content">
+                    <div class="inner-window">
+                        <h2>📅 Davomat</h2>
+                        <p class="window-desc">Kunlik davomat nazorati.</p>
+                        <div class="placeholder-box"><p>Barcha o'quvchilar darsda qatnashmoqda.</p></div>
+                    </div>
+                </section>
+
+                <!-- 6. TO'LOVLAR SECTION -->
+                <section id="tab-payments" class="tab-content">
+                    <div class="inner-window">
+                        <h2>💳 To'lovlar</h2>
+                        <p class="window-desc">Oylik to'lovlar holati.</p>
+                        <div class="placeholder-box"><p>Qarzdorliklar mavjud emas.</p></div>
+                    </div>
+                </section>
+
+                <!-- 7. HISOBOTLAR SECTION -->
+                <section id="tab-reports" class="tab-content">
+                    <div class="inner-window">
+                        <h2>📊 Hisobotlar</h2>
+                        <p class="window-desc">Markaz statistikasi.</p>
+                        <div class="placeholder-box"><p>Oylik hisobotlar tayyor.</p></div>
+                    </div>
+                </section>
+
+                <!-- 8. SOZLAMALAR SECTION (Forma elementi bilan) -->
+                <section id="tab-settings" class="tab-content">
+                    <div class="inner-window">
+                        <h2>⚙️ Sozlamalar</h2>
+                        <p class="window-desc">Tizimni sozlash paneli.</p>
+                        <div class="settings-form-box">
+                            <div class="form-group-modern">
+                                <label>O'quv markazi nomi:</label>
+                                <input type="text" id="center-name-input" value="EduTrack Markazi">
+                            </div>
+                            <div class="form-group-modern">
+                                <label>Admin emaili:</label>
+                                <input type="email" id="admin-email-input" value="admin@edutrack.uz">
+                            </div>
+                            <button class="btn-primary-custom" id="save-settings-btn">Saqlash</button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
